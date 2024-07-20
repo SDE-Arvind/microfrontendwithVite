@@ -7,7 +7,7 @@ function Header() {
   return (
     <div id="header">
       <div className='actionBar'>
-      <label className="label">This is the header component from Root Project</label>
+      <label className="label">This is the header component from Root Project on port 8000</label>
         <nav>
           <ul id='menu'>
             <li><a id="menu" href="/profiles">Customers</a></li>
