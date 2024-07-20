@@ -18,23 +18,23 @@ function App(props) {
       setData(profileData.data);
       const orderData = await getOrderDetails(Number(params.id));
       setOrders(orderData);
-      // const event = new CustomEvent('profile-order-fetched',{
-      //   detail:{
-      //     user: profileData.data,
-      //     qty: orderData.totalQuantity,
-      //     price: orderData.total
-      //   }
-      // });
-      // window.dispatchEvent(event);
+      const event = new CustomEvent('profile-order-fetched',{
+        detail:{
+          user: profileData.data,
+          qty: orderData.totalQuantity,
+          price: orderData.total
+        }
+      });
+      window.dispatchEvent(event);
       setLoading(false);
     },500);  
   },[]);
 
   
   return (
-    <>
+    <div style={{margin:'20px'}}>
       <div>
-      <h1> Orders Application </h1>
+      <label> Orders Application Micro-Frontend React Application on port 4173  </label>
       <div>
         {
         isLoading?
@@ -76,7 +76,7 @@ function App(props) {
         <a href='/profiles'>Back to profiles list</a>
       </div>
     </div>
-    </>
+    </div>
   )
 }
 
