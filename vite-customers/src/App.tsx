@@ -1,9 +1,9 @@
 import './style.css';
 
-// import { CustomProps, ParcelConfig, ParcelProps } from 'single-spa';
+import { CustomProps, ParcelConfig } from 'single-spa';
 import {Profile, getAllUsers} from '@acc/api';
 
-// import Parcel from 'single-spa-react/parcel'
+import Parcel from 'single-spa-react/parcel'
 import { useState } from 'react';
 
 export default function Root(props:any) {
@@ -68,12 +68,12 @@ export default function Root(props:any) {
         </div>
       }
 
-      {/* <Parcel
+       <Parcel
         config={ParcelComponent()}
-        initiator= {"Profile Application"}
+        initiator= {"Customer MFA"}
         wrapWith='div'
         wrapStyle={{position:'absolute', bottom:20, right:20}}
-       /> */}
+       />
       
     </div>
 );
