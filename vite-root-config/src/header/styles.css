@@ -3,9 +3,13 @@
   height: 80px;
 }
 
-label {
-  font-size: 15px;
+label#title {
+  background-color:lightgrey; 
+  font-size: 12px;
+  padding:3px;
+  border-radius: 5px; 
 }
+
 #header {
   display: flex;
   background-color: aliceblue;
@@ -16,13 +20,22 @@ label {
   margin: 0px;
   border-bottom: 5px solid rgb(13, 67, 215);
 }
+
+.actionBar ul#menu {
+  padding: 0;
+}
+
 ul#menu li{
   display: inline;
+  list-style: none;
 }
 
 li {
   margin-bottom: 5px;
   font-size: 20px;
+}
+.actionBar ul#menu li {
+  margin-right: 40px; 
 }
 
 a#menu {

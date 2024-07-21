@@ -26,7 +26,7 @@ export default function Root(props:any) {
 
   return (
     <div id="profile">
-      <label> Customers List Micro-Frontend React Application on port 4172</label>
+      <label id="title"> Customers List Micro-Frontend React Application on port 4172</label>
       {
         (data===null && !isLoading ) ?     
           <div id="detailsBtn">

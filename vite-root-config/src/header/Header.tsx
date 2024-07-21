@@ -17,12 +17,11 @@ function Header() {
   return (
     <div id="header">
       <div className='actionBar'>
-      <label className="label">This is the header component from Root Project on port 8000</label>
+      <label id="title">This is the header component from Root Project on port 8000</label>
         <nav>
           <ul id='menu'>
             <li><a id="menu" href="/profiles">Customers</a></li>
-            {/* <li><a href="/address" id="menu">Address</a></li> */}
-            {/* <li><a href="/orders" id="menu">Orders</a></li> */}
+            <li><a href="/contactus" id="menu">Contact Us</a></li>
           </ul>
         </nav>
       </div>

@@ -1,4 +1,4 @@
-import { registerApplication, start, LifeCycles } from "single-spa";
+import { LifeCycles, registerApplication, start } from "single-spa";
 import { bootstrap, mount, unmount } from './header/acc-header';
 
 registerApplication(
@@ -19,12 +19,12 @@ registerApplication({
 
 
 registerApplication({
-  name: "@acc/address",
+  name: "@acc/contactus",
   app: () =>
     System.import<LifeCycles>(
-      "@acc/address"
+      "@acc/contactus"
     ),
-  activeWhen: ["/address"],
+  activeWhen: ["/contactus"],
 });
 
 registerApplication({

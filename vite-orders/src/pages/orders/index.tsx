@@ -34,7 +34,7 @@ function App(props) {
   return (
     <div style={{margin:'20px'}}>
       <div>
-      <label> Orders Application Micro-Frontend React Application on port 4173  </label>
+      <label id="title"> Orders Application Micro-Frontend React Application on port 4173  </label>
       <div>
         {
         isLoading?
