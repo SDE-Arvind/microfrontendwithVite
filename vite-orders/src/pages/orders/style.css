@@ -1,17 +1,7 @@
-#profile {
-  background-color: white;
-  width: '100%';
-  height: auto;
-  padding: 20px;
+.container{
+  margin: 20px;
 }
 
-.users {
-  display: flex;
-  background-color: white;
-  border: 1px solid #f3f3f3; /* Light grey */
-  padding: 10px;
-  margin-top: 20px;
-}
 #loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
@@ -26,24 +16,9 @@
   100% { transform: rotate(360deg); }
 }
 
-#detailsBtn {
-  margin: 10px;
-}
-
 #detailSection {
   margin: 10px;
 }
-
-#field {
-  font-size: 17px;
-  color: black;
-  margin-right: 10px;
-}
-#value {
-  color: gray;
-  font-size: 17px;
-}
-
 
 #fieldOrder {
   font-size: 15px;
@@ -55,4 +30,15 @@
   color: gray;
   font-size: 15px;
   font-style: italic;
+}
+
+.orderItem{
+  margin-top:30px;
+  border-color: black;
+  border-style: solid;
+  margin: 10px;
+}
+
+.footer{
+  margin-top: 30px;
 }

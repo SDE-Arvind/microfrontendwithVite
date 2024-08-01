@@ -1,8 +1,3 @@
-.logoImage {
-  width: 200px;
-  height: 80px;
-}
-
 label#title {
   background-color:lightgrey; 
   font-size: 12px;
@@ -46,4 +41,25 @@ a#menu {
 
 .actionBar{
   margin-top: 10px;
+}
+
+.label{
+  color:gray;
+  font-size:10px;
+}
+.labelLarge{
+  color:gray;
+  font-size:12px;
+}
+.profileImage{
+  height: 60px;
+  width:60px;
+  border-radius: 50%;
+}
+.headerLeft{
+  display:flex ; 
+  align-items:center;
+  justify-content:end;
+  flex:1 ;
+  margin-right:20px;
 }

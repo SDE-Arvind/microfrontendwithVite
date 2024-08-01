@@ -13,3 +13,8 @@
   color: darkslategray;
   font-weight: 500;
 }
+.buttonContainer { 
+  width:100%;
+  display:flex;
+  justify-content:end
+}

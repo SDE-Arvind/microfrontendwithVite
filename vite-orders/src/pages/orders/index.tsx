@@ -1,13 +1,12 @@
 import './style.css'
 
-import {OrderDetail, Profile, getOrderDetails, getProfileDetails} from '@acc/api';
+import {OrderDetail, getOrderDetails, getProfileDetails} from '@acc/api';
 import { useEffect, useState } from 'react';
 
 import { useParams } from 'react-router-dom';
 
-function App(props) {
+export const Orders= ()=> {
   const [isLoading, setLoading] = useState<Boolean>(true);
-  const [user, setData] = useState<Profile | null>(null);
   const [orders, setOrders] = useState<OrderDetail | null>(null);
   const params = useParams<{id:string}>();
 
@@ -15,7 +14,6 @@ function App(props) {
     setTimeout(async ()=>{
       //set time out added to get the loading effects 
       const profileData = await getProfileDetails(Number(params.id));
-      setData(profileData.data);
       const orderData = await getOrderDetails(Number(params.id));
       setOrders(orderData);
       const event = new CustomEvent('profile-order-fetched',{
@@ -32,7 +30,7 @@ function App(props) {
 
   
   return (
-    <div style={{margin:'20px'}}>
+    <div className='container'>
       <div>
       <label id="title"> Orders Application Micro-Frontend React Application on port 4173  </label>
       <div>
@@ -43,9 +41,7 @@ function App(props) {
         orders?.products && 
         orders.products.map(order=>{
           return(
-            <div style={{marginTop:'30px'}} key={order.id}>
-            <label style={{fontSize:'20px', fontWeight:'bold'}}>{user?.first_name}'s Orders</label>
-            <div className='users' >
+          <div className='orderItem' key={order.id}>           
               <div id="detailSection">
                 <img src={order?.thumbnail} width={80} height={80} />
               </div>
@@ -67,17 +63,14 @@ function App(props) {
                 </div>
               </div>
             </div> 
-            </div>
           )
         })
         }
       </div>
-      <div style={{marginTop:20}}>
+      <div className='footer'>
         <a href='/profiles'>Back to profiles list</a>
       </div>
     </div>
     </div>
   )
 }
-
-export default App

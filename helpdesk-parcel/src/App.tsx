@@ -16,12 +16,12 @@ function App(props:any) {
           isHelpDeskOpened &&  
           <div>
             <div id='window'>
-              This is the HelpDesk <label id="highlight">Parcel</label> initated by 
+              This is the HelpDesk <label id="highlight">Parcel</label> initiated by 
                <label id="highlight"> {props.initiator}</label>
             </div>
           </div>
         }
-        <div style={{ width:'100%', display:'flex', justifyContent:'end'}}>
+        <div className='buttonContainer'>
           <button onClick={toggleHelpdesk}>{isHelpDeskOpened? 'Close' : 'Open'} helpDesk</button>
         </div>
       </div>

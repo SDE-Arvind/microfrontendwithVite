@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Orders from './pages/orders';
+import { Orders } from "./pages/orders";
 
 function App() {
   return (

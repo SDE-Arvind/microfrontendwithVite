@@ -1,12 +1,12 @@
 import './style.css';
 
-import { CustomProps, ParcelConfig } from 'single-spa';
 import {Profile, getAllUsers} from '@acc/api';
 
 import Parcel from 'single-spa-react/parcel'
+import { ParcelConfig } from 'single-spa';
 import { useState } from 'react';
 
-export default function Root(props:any) {
+export default function App() {
   const [isLoading, setLoading] = useState<Boolean>(false);
   const [data, setData] = useState<Profile[]|null>(null);
 
@@ -43,7 +43,7 @@ export default function Root(props:any) {
             return (
             <div className='users'>
                 <div id="detailSection">
-                  <img src={user.avatar} width={80} height={80}  style={{ borderRadius: '50%' }}/>
+                  <img src={user.avatar} className="profileImage"/>
                 </div>
                 <div>
                 <div id="detailSection">
