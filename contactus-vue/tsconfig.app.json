@@ -13,6 +13,8 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noImplicitAny": false,
+    "allowJs": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "preserve",
